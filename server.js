@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to my application" });
+    res.json({ message: "localhost:8080/api/players" });
 });
 
 require("./app/routes/players.routes.js")(app);
