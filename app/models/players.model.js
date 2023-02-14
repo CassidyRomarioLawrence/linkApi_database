@@ -58,8 +58,8 @@ Players.getAll = (playerName, result) => {
   });
 };
 
-Players.getAllPublished = result => {
-  sql.query("SELECT * FROM players WHERE published=true", (err, res) => {
+Players.getAllBallers = result => {
+  sql.query("SELECT * FROM players WHERE baller=true", (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(null, err);

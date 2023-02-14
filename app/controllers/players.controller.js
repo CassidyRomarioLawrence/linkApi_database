@@ -16,7 +16,7 @@ exports.findOne = (req, res) => {
 };
 
 // find all ballers
-exports.findAllPublished = (req, res) => {
+exports.findAllBallers = (req, res) => {
   
 };
 
@@ -75,8 +75,8 @@ exports.findAll = (req, res) => {
   });
 };
 
-exports.findAllBaller = (req, res) => {
-  Players.getAllBaller((err, data) => {
+exports.findAllBallers = (req, res) => {
+  Players.getAllBallers((err, data) => {
     if (err)
       res.status(500).send({
         message:
@@ -143,7 +143,7 @@ exports.delete = (req, res) => {
           message: "Could not delete Player with id " + req.params.id
         });
       }
-    } else res.send({ message: `Tutorial was deleted successfully!` });
+    } else res.send({ message: `Player was deleted successfully!` });
   });
 };
 

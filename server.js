@@ -17,13 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-    res.json({ message: "localhost:8080/api/players" });
+    res.json({ message: "Welcome to my application" });
 });
 
 require("./app/routes/players.routes.js")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4321;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });

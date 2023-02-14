@@ -10,7 +10,7 @@ module.exports = app => {
   router.get("/", players.findAll);
 
   // Retrieve all ballers
-  router.get("/baller", players.findAllPublished);
+  router.get("/baller", players.findAllBallers);
 
   // Retrieve a single Player with id
   router.get("/:id", players.findOne);
